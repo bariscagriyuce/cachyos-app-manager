@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=CachyOS Uygulama Yöneticisi
+Comment=Yüklü uygulamaları görüntüle, ara ve kaldır
+Exec=python3 "/run/media/barisyuce/DATA/CLAUDE/Cacyhos App Manager/cachyos_app_manager.py"
+Icon=system-software-install
+Terminal=false
+Categories=System;PackageManager;
+Keywords=uninstall;remove;pacman;aur;kaldır;paket;
