@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
 """CachyOS Uygulama Yöneticisi — yüklü paketleri listeler, arar ve kaldırır."""
 
 import configparser

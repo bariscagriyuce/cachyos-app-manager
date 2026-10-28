@@ -64,3 +64,7 @@ cp cachyos-app-manager.desktop ~/.local/share/applications/
 | Removal | `pkexec pacman -Rns --noconfirm <packages>` |
 
 The app only reads data as a normal user; root privileges are requested through polkit only when you confirm a removal.
+
+## License
+
+This project is licensed under the [GNU General Public License v3.0 or later](LICENSE).
