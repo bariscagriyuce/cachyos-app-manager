@@ -2,7 +2,16 @@
 
 A simple graphical tool for **viewing, searching and uninstalling installed packages** on CachyOS (and other Arch-based distros) — no need to remember `pacman` commands.
 
-The interface is in Turkish.
+## Languages
+
+The interface follows your system language automatically:
+
+- 🇬🇧 English (default)
+- 🇹🇷 Turkish
+- 🇧🇷 Brazilian Portuguese
+
+To force a language, start it with e.g. `LANGUAGE=pt_BR cachyos-app-manager`.
+Adding a language only needs a new dictionary in `TRANSLATIONS` at the top of `cachyos_app_manager.py`, plus `Name[xx]`/`Comment[xx]` lines in the `.desktop` file.
 
 ## Features
 
@@ -23,32 +32,26 @@ The interface is in Turkish.
 - Package details (`pacman -Qi`) on double-click, sortable columns (e.g. by size), right-click menu.
 - Packages installed as dependencies are hidden by default; toggle them with the checkbox.
 
-## Requirements
+## Installation
 
-- Python 3
-- PyQt6 (`python-pyqt6`)
-- `pacman`, `expac`, `polkit` (`pkexec`)
-
-```bash
-sudo pacman -S --needed python-pyqt6 expac polkit
-```
-
-All of these are installed by default on CachyOS KDE.
-
-## Usage
+The repo contains a `PKGBUILD`, so it installs as a normal pacman package (binary, menu entry and icon go to `/usr`):
 
 ```bash
 git clone https://github.com/bariscagriyuce/cachyos-app-manager.git
 cd cachyos-app-manager
-python3 cachyos_app_manager.py
+makepkg -si
 ```
 
-### Add to the application menu
+Then launch **CachyOS App Manager** from the application menu, or run `cachyos-app-manager`.
 
-Edit the `Exec=` line in `cachyos-app-manager.desktop` so it points to where you cloned the repo, then:
+To update later: `git pull && makepkg -si`. To uninstall: `sudo pacman -R cachyos-app-manager`.
+
+Dependencies (`python-pyqt6`, `expac`, `polkit`) are installed automatically by `makepkg -s`; all of them come with CachyOS KDE by default.
+
+### Run without installing
 
 ```bash
-cp cachyos-app-manager.desktop ~/.local/share/applications/
+python3 cachyos_app_manager.py
 ```
 
 ## How it works

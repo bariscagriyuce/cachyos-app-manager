@@ -1,9 +1,19 @@
 [Desktop Entry]
 Type=Application
-Name=CachyOS Uygulama Yöneticisi
-Comment=Yüklü uygulamaları görüntüle, ara ve kaldır
-Exec=python3 "/run/media/barisyuce/DATA/CLAUDE/Cacyhos App Manager/cachyos_app_manager.py"
-Icon=system-software-install
+Name=CachyOS App Manager
+Name[tr]=CachyOS Uygulama Yöneticisi
+Name[pt_BR]=Gerenciador de Aplicativos CachyOS
+GenericName=Package Remover
+GenericName[tr]=Paket Kaldırıcı
+GenericName[pt_BR]=Removedor de Pacotes
+Comment=View, search and uninstall installed applications
+Comment[tr]=Yüklü uygulamaları görüntüle, ara ve kaldır
+Comment[pt_BR]=Visualize, pesquise e desinstale aplicativos instalados
+Exec=cachyos-app-manager
+Icon=cachyos-app-manager
 Terminal=false
 Categories=System;PackageManager;
-Keywords=uninstall;remove;pacman;aur;kaldır;paket;
+Keywords=uninstall;remove;pacman;aur;package;
+Keywords[tr]=kaldır;sil;paket;uygulama;pacman;aur;
+Keywords[pt_BR]=desinstalar;remover;pacote;aplicativo;pacman;aur;
+StartupNotify=true
