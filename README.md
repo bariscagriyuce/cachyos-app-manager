@@ -1,5 +1,7 @@
 # CachyOS App Manager
 
+**English** | [Türkçe](README.tr.md) | [Português (Brasil)](README.pt-BR.md)
+
 A simple graphical tool for **viewing, searching and uninstalling installed packages** on CachyOS (and other Arch-based distros) — no need to remember `pacman` commands.
 
 ## Languages
